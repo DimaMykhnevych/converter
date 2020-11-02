@@ -1,0 +1,51 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  /* border: 1px solid red; */
+}
+
+body {
+  background-image: url('/images/formulas.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+.main-section {
+  position: relative;
+  background-color: rgb(67, 72, 92);
+  box-shadow: 0px 0px 10px rgb(235, 211, 211);
+  border-radius: 4px;
+  margin-top: 100px;
+  z-index: 1;
+}
+.value-header {
+  background-color: rgb(20, 83, 112);
+  border-radius: 10px;
+}
+.arrow {
+  font-size: 30px;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+}
+.arrow:hover {
+  color: rgb(255, 223, 223);
+}
+.converter-icon {
+  width: 100px;
+}
+.test {
+  /* d-flex flex-column align-content-center justify-content-center */
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+.disabled {
+  cursor: default;
+  background-color: rgb(77, 77, 77);
+}
