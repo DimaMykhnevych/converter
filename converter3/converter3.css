@@ -1,0 +1,40 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+main {
+  height: calc(100vh - 125px);
+}
+body {
+  background-image: url('../images/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.descr {
+  color: rgb(71, 11, 11);
+}
+
+.item {
+  height: 80px;
+  border: 5px solid wheat;
+}
+.item:hover {
+  background-color: wheat;
+  cursor: pointer;
+}
+.items-wrapper {
+  display: flex;
+  flex-direction: column;
+  color: tomato;
+  font-size: 1.5em;
+}
+.form-control {
+  width: 80%;
+}
+.converter-length {
+  display: none;
+}
+.converter-width {
+  display: none;
+}

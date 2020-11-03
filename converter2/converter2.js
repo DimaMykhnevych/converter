@@ -42,6 +42,7 @@ const finishValueInput = document.querySelector('#finishValue');
 
 const onCategoriesChange = (e) => {
   fillAdjacentCategories();
+  onClearButtonClick();
 };
 
 const onClearButtonClick = (e) => {
@@ -51,9 +52,9 @@ const onClearButtonClick = (e) => {
   }
 };
 
-const onInputValue = (e) => {
+const onInputValue = (e, value = -1) => {
   let selectedPhysQuant = getCurrentPhysValuesToConvert();
-  let inputedValue = Number(e.target.value);
+  let inputedValue = value === -1 ? Number(e.target.value) : value;
   if (e.target === startValueInput) {
     finishValueInput.value =
       inputedValue *
@@ -63,6 +64,16 @@ const onInputValue = (e) => {
       inputedValue *
       (coef[selectedPhysQuant.to] / coef[selectedPhysQuant.from]);
   }
+};
+
+const onInitialPhysChange = (e) => {
+  let inputedValue = Number(startValueInput.value);
+  onInputValue({ target: initialPhysicQuantitySelect }, inputedValue);
+};
+
+const onEndPhysChange = (e) => {
+  let inputedValue = Number(finishValueInput.value);
+  onInputValue({ target: endPhysicQuantitySelect }, inputedValue);
 };
 
 const onInputClick = (e) => {
@@ -111,6 +122,8 @@ function renderAdjacentOptions(parent, values) {
 fillCategories();
 fillAdjacentCategories();
 categories.addEventListener('change', onCategoriesChange);
+initialPhysicQuantitySelect.addEventListener('change', onInitialPhysChange);
+endPhysicQuantitySelect.addEventListener('change', onEndPhysChange);
 clearBtn.addEventListener('click', onClearButtonClick);
 startValueInput.addEventListener('click', onInputClick);
 finishValueInput.addEventListener('click', onInputClick);
