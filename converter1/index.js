@@ -32,6 +32,7 @@ const to = document.querySelector('.to');
 const helpTextFrom = document.querySelector('#helpId');
 const helpTextTo = document.querySelector('#helpId2');
 const convert = document.querySelector('#convertBtn');
+convert.disabled = true;
 
 let previousPhysicTextClicked;
 
@@ -67,6 +68,11 @@ const onItemClick = (e) => {
   setPhysicText(parent, text);
   disableUnneededItems(text);
   physicValue.classList.add('active');
+
+  let curActive = findActiveItems();
+  if (curActive.first && curActive.second) {
+    convert.disabled = false;
+  }
 };
 
 const onArrowClick = (e) => {

@@ -1,0 +1,24 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-image: url('../images/formulas2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main {
+  height: calc(100vh - 75px);
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+.main-wrapper {
+  background-color: honeydew;
+}
+.heading {
+  color: rgb(240, 142, 14);
+  background-color: rgba(197, 187, 173, 0.267);
+  border-radius: 5px;
+}
