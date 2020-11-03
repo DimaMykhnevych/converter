@@ -94,7 +94,10 @@
               <div class="row">
                 <div class="col">
                   <div class="form-group">
-                    <label>From:<span class="fromPhys ml-2"></span></label>
+                    <label
+                      ><span class="from">From:</span
+                      ><span class="fromPhys ml-2"></span
+                    ></label>
                     <input
                       type="text"
                       class="form-control"
@@ -112,14 +115,17 @@
                 </div>
                 <div class="col">
                   <div class="form-group">
-                    <label>To:<span class="toPhys ml-2"></span></label>
+                    <label
+                      ><span class="to">To:</span
+                      ><span class="toPhys ml-2"></span
+                    ></label>
                     <input
                       type="text"
                       class="form-control"
                       name=""
                       id="finalQuantity"
                       aria-describedby="helpId2"
-                      placeholder="type value"
+                      placeholder="here will be result"
                     />
                     <small id="helpId2" class="form-text text-muted"
                       >Final quantity</small
@@ -129,7 +135,11 @@
               </div>
               <div class="row text-center">
                 <div class="col-lg-4 col-md-4 col-sm-12 mx-auto">
-                  <button type="button" class="btn btn-warning w-100">
+                  <button
+                    id="convertBtn"
+                    type="button"
+                    class="btn btn-warning w-100"
+                  >
                     Convert <i class="fas fa-magic pl-2"></i>
                   </button>
                 </div>
